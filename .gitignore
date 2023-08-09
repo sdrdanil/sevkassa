@@ -1,0 +1,4 @@
+node_modules
+dev
+gulp/config/ftp.js
+gulp/version.json

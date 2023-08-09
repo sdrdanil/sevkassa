@@ -1,0 +1,392 @@
+$border-line: 1px solid #7D7D7D;
+
+.footer {
+  padding: 35px 0 39px;
+  color: white;
+  background-color: var(--blue);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 230fr 300fr 300fr 300fr 230fr;
+    grid-template-rows: 247px;
+    grid-template-areas:
+      "nav email tel address up"
+      "common common common common common";
+    column-gap: 10px;
+    row-gap: 54px;
+  }
+
+  &__nav {
+    grid-area: nav;
+    margin-right: 16px;
+    padding-top: 1px;
+    border-right: $border-line;
+  }
+
+  &__item-link {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 200%;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--orange);
+    }
+
+    &:focus-visible {
+      outline: var(--focus-outline);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    &--email {
+      grid-area: email;
+      border-right: $border-line;
+    }
+
+    &--tel {
+      grid-area: tel;
+      border-right: $border-line;
+    }
+
+    &--address {
+      grid-area: address;
+      margin-left: 20px;
+    }
+  }
+
+  &__icon-wrapper {
+    width: 80px;
+    aspect-ratio: 1/1;
+
+    &--email {
+      margin-bottom: 31px;
+    }
+
+    &--tel {
+      margin-bottom: 39px;
+    }
+
+    &--address {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+  }
+
+  &__contact-title {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+  }
+
+  &__contact-link {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 200%;
+    white-space: nowrap;
+    text-align: center;
+
+    &--hover-on:hover {
+      color: var(--orange);
+    }
+
+    &:focus-visible {
+      outline: var(--focus-outline);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+  }
+
+  &__wrapper-up {
+    grid-area: up;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+  }
+
+  &__up {
+    color: var(--grey);
+    transform: translate(2px, -33px);
+
+    &:hover {
+      color: var(--orange);
+    }
+
+    &:focus-visible {
+      outline: var(--focus-outline);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+  }
+
+  &__up-text {
+    display: none;
+  }
+
+  &__up-icon {
+    width: 35px;
+    height: 83px;
+    stroke-width: 3px;
+    stroke: currentColor;
+  }
+
+  &__common {
+    grid-area: common;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+  }
+
+  &__logo {
+    display: none;
+  }
+
+  &__copy {
+    max-width: 290px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__privacy {
+    justify-self: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &:hover {
+      color: var(--orange);
+    }
+
+    &:focus-visible {
+      outline: var(--focus-outline);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+  }
+
+  &__reg-number {
+    justify-self: end;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+@include breakpoint-down(clg) {
+  .footer {
+    &__inner {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+        "email tel address"
+        "nav common up";
+      column-gap: 25px;
+      row-gap: 39px;
+    }
+
+    &__nav {
+      margin-right: 0;
+    }
+
+    &__list {
+      padding-left: 6px;
+      transform: translateY(5px);
+    }
+
+    &__item {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__item-link {
+      line-height: 1;
+    }
+
+    &__list-contacts {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 145px;
+    }
+
+    &__contact {
+      padding-top: 10px;
+      justify-content: flex-start;
+
+      &--address {
+        margin-left: 0;
+      }
+    }
+
+    &__icon-wrapper {
+      width: 50px;
+
+      &--email {
+        margin-bottom: 14px;
+      }
+
+      &--tel {
+        margin-bottom: 14px;
+      }
+
+      &--address {
+        margin-bottom: 14px;
+        transform: translate(0, -5px);
+      }
+    }
+
+    &__contact-title {
+      font-size: 17px;
+      margin-bottom: 3px;
+    }
+
+    &__contact-link {
+      white-space: normal;
+      line-height: 146%;
+    }
+
+    &__common {
+      max-width: 300px;
+      min-height: 239px;
+      justify-self: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-auto-rows: min-content;
+      row-gap: 25px;
+      grid-area: 2 / 1 / 3 / 4;
+      transform: translate(30px, -2px);
+    }
+
+    &__logo {
+      display: block;
+      justify-self: center;
+      align-self: center;
+    }
+
+    &__copy {
+      justify-self: center;
+      text-align: center;
+      max-width: initial;
+    }
+
+    &__privacy {
+      order: 1;
+      justify-self: center;
+    }
+
+    &__reg-number {
+      justify-self: center;
+    }
+
+    &__wrapper-up {
+      align-items: center;
+    }
+
+    &__up {
+      transform: translate(-13px, 15px);
+    }
+  }
+}
+
+@include breakpoint-down(csm) {
+  .footer {
+    padding-bottom: 31px;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "nav"
+        "email"
+        "tel"
+        "address"
+        "common"
+        "up";
+      justify-items: center;
+      row-gap: 20px;
+    }
+
+    &__nav {
+      width: 220px;
+      padding-bottom: 17px;
+      border-right: none;
+      border-bottom: $border-line;
+    }
+
+    &__list {
+      padding: 0;
+      text-align: center;
+      transform: none;
+    }
+
+    &__contact {
+      width: 220px;
+      padding-top: 5px;
+      padding-bottom: 13px;
+      // padding-top: 0;
+      // padding-bottom: 0;
+      border-right: none;
+      border-bottom: $border-line;
+    }
+
+    &__common {
+      grid-area: common;
+      min-height: initial;
+      padding-top: 24px;
+      row-gap: 0;
+      transform: none;
+    }
+
+    &__logo {
+      margin-bottom: 55px;
+    }
+
+    &__copy {
+      margin-bottom: 20px;
+    }
+
+    &__reg-number {
+      margin-bottom: 41px;
+    }
+
+    &__privacy {
+      margin-bottom: 0;
+    }
+
+    &__up {
+      transform: none;
+    }
+
+    &__up-text {
+      display: inline-block;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-decoration-line: underline;
+      text-underline-offset: 4px;
+    }
+
+    &__up-icon {
+      display: none;
+    }
+  }
+}

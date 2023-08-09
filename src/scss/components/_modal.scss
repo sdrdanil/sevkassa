@@ -1,0 +1,107 @@
+$duration: .4s;
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  padding: 100px 100px;
+  background: rgba(grey, .8);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: opacity $duration ease, visibility $duration;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+
+    .modal__content {
+      transform: translateY(0);
+    }
+  }
+
+  &__content {
+    position: relative;
+    background: white;
+    transform: translateY(-200px);
+    transition-property: transform;
+    transition-duration: $duration;
+    transition-timing-function: cubic-bezier(0.250, 0.250, 0.240, 1.650);
+  }
+
+  &__close {
+    position: absolute;
+    display: inline-block;
+    top: 35px;
+    right: 35px;
+    top: 26px;
+    right: 37px;
+
+    &:focus-visible {
+      outline: var(--focus-outline);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+  }
+
+  &__close-icon {
+    display: block;
+    width: 20px;
+    aspect-ratio: 1/1;
+    transition: .3s ease;
+
+    &:hover {
+      color: var(--orange);
+    }
+  }
+}
+
+@include breakpoint-down(clg) {
+  .modal {
+    padding: 8vh 2.3vw;
+  }
+}
+
+@include breakpoint-down(lg) {
+  .modal {
+    &__close {
+      top: 20px;
+      right: 20px;
+    }
+
+    &__close-icon {
+      width: 25px;
+    }
+  }
+}
+
+@include breakpoint-down(sm) {
+  .modal {
+    padding: 0;
+
+    &--active {
+      .modal__content {
+        transform: scale(1);
+      }
+    }
+
+    &__content {
+      width: 100%;
+      min-height: 100vh;
+      transform-origin: top;
+      transform: scale(0);
+      transition: transform $duration ease;
+    }
+
+    &__close {
+      top: 15px;
+      right: 15px;
+    }
+  }
+}

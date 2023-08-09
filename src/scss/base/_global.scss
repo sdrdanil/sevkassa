@@ -1,0 +1,58 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 1 auto;
+}
+
+.visually-hidden {
+  @extend %visually-hidden;
+}
+
+.container {
+  min-width: 1300px;
+  width: 87.5%;
+  margin: 0 auto;
+
+  @include breakpoint-down(clg) {
+    min-width: unset;
+    width: unset;
+    margin: 0 30px;
+  }
+
+  @include breakpoint-down(csm) {
+    margin: 0 10px;
+  }
+}
+
+.lock {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width);
+}
+
+// .header,
+// .hero,
+// .greeting,
+// .benefits,
+// .shop,
+// .consultation,
+// .feedback,
+// .info,
+// .service,
+// .articles,
+// .footer,
+.none {
+  display: none !important;
+}

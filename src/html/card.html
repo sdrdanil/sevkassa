@@ -1,0 +1,24 @@
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="@img/content/products/@@img.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--@@img" src="@img/content/products/@@img.jpg" alt="@@alt" width="@@img-width" height="@@img-height">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>@@title</h3>
+    <span class="card__duration" data-product-duration>@@duration</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>@@price</output>
+      <input type="hidden" name="price" value="@@price" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>

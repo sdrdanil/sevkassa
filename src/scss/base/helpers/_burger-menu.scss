@@ -1,0 +1,63 @@
+@mixin add-burger-menu($selectorButton, $selectorIconBase, $selectorIconActive) {
+  #{$selectorButton} {
+    --bm-time: 0.1s;
+    --bm-width: 40px;
+    --bm-height: 30px;
+    --bm-line-height: 1px;
+    --bm-line-margin: 2;
+    --bm-color: #fff;
+
+    height: var(--bm-height);
+    width: var(--bm-width);
+
+    @content;
+  }
+
+  #{$selectorIconBase} {
+    position: relative;
+    display: block;
+    width: var(--bm-width);
+    height: var(--bm-line-height);
+    background-color: var(--bm-color);
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      width: var(--bm-width);
+      height: var(--bm-line-height);
+      background-color: var(--bm-color);
+      transition: transform var(--bm-time) ease-in,
+        top var(--bm-time) linear var(--bm-time);
+    }
+
+    &::before {
+      top: calc(var(--bm-line-height) * -8);
+    }
+
+    &::after {
+      top: calc(var(--bm-line-height) * 8);
+    }
+  }
+
+  #{$selectorIconActive} {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      top: 0;
+      transition: top var(--bm-time) linear,
+        transform var(--bm-time) ease-in var(--bm-time);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@mixin hover-on {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin fix-styling-autofill($text-color) {
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 10000s ease-in-out 0s;
+    -webkit-text-fill-color: $text-color;
+    caret-color: $text-color;
+    @content;
+  }
+
+  @include hover-on {
+    &:-webkit-autofill:hover {
+      transition: background-color 10000s ease-in-out 0s;
+      -webkit-text-fill-color: $text-color;
+      caret-color: $text-color;
+      @content;
+    }
+  }
+}
+
+@mixin add-transparency-shadow($box-shadow, $transition) {
+  & {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0;
+    background: transparent;
+    box-shadow: $box-shadow;
+    transition: $transition;
+    @content;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

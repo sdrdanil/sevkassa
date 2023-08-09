@@ -1,0 +1,17 @@
+.text {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: black;
+
+  @include breakpoint-down(clg) {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  @include breakpoint-down(csm) {
+    font-size: 16px;
+  }
+}

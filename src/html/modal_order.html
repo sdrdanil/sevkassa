@@ -1,0 +1,167 @@
+<div class="modal" data-modal="order" style="z-index: 1000;" hidden data-modal-close-strict>
+  <article class="modal__content modal-order" data-product>
+    <button class="modal__close" aria-label="Закрыть" data-modal-close>
+      <svg class="modal__close-icon">
+        <use href="@img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <form class="modal-order__inner" method="POST" onsubmit="return false;">
+      <!-- HEAD -->
+      <div class="modal-order__head">
+        <picture class="modal-order__picture-head" data-product-image>
+          <source srcset="@img/plug.webp" type="image/webp">
+          <img class="modal-order__image" src="@img/plug.jpg" alt="[image]">
+        </picture>
+        <h2 class="modal-order__title" data-product-title>[title]</h2>
+        <p class="modal-order__tech-info">
+          <span class="modal-order__duration" data-product-duration>[duration]</span>
+          <span class="modal-order__article-number">Артикул: ХХХХХХХХ</span>
+        </p>
+        <div class="modal-order__input-price-wrapper" data-product-cost-per-item>
+          <output class="modal-order__price" data-product-total-price>[price]</output>
+          <input type="hidden" name="price" value="" data-product-price-per-item>
+          <div class="input-number">
+            <button class="input-number__button input-number__button--minus" type="button"
+              tabindex="-1">&ndash;</button>
+            <input class="input-number__field" type="number" name="number" min="1" step="1" value="1"
+              data-product-quantity>
+            <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+          </div>
+        </div>
+        <p class="modal-order__benefits">
+          <span class="modal-order__benefits-item modal-order__benefits-item--price">
+            <svg class="modal-order__benefits-icon">
+              <use href="@img/sprite.svg#coins"></use>
+            </svg>
+            Выгодная цена!
+          </span>
+          <span class="modal-order__benefits-item">
+            <svg class="modal-order__benefits-icon">
+              <use href="@img/sprite.svg#fast-arrow"></use>
+            </svg>
+            Быстрая доставка
+          </span>
+        </p>
+      </div>
+
+      <!-- MAIN -->
+      <div class="modal-order__main">
+        <div class="modal-order__main-inner">
+          <picture class="modal-order__picture-main" data-product-image>
+            <source srcset="@img/plug.webp" type="image/webp">
+            <img class="modal-order__image" src="@img/plug.jpg" alt="[image]">
+          </picture>
+          <fieldset class="modal-order__fieldset">
+            <input class="modal-order__input input input--border--down-md" type="text" name="name" placeholder="ФИО"
+              autocomplete="name">
+            <input class="modal-order__input input input--border--down-md" type="tel" name="tel" placeholder="Телефон"
+              data-tel-mask>
+            <input class="modal-order__input input input--border--down-md" type="email" name="email"
+              placeholder="E-mail" autocomplete="email">
+
+            <div class="select select--border--down-md">
+              <button class="select__pick select__pick--waiting" type="button">
+                <span class="select__text">Выберите способ доставки</span>
+                <svg class="select__icon-pick">
+                  <use href="@img/sprite.svg#select-arrow"></use>
+                </svg>
+              </button>
+              <div class="select__list-wrapper">
+                <ul class="select__list select__list--border--down-md">
+                  <li class="select__item">
+                    <input class="select__input-radio" type="radio" id="option-handover-pickup" name="handover"
+                      value="pickup">
+                    <label class="select__label" for="option-handover-pickup">
+                      <svg class="select__icon">
+                        <use href="@img/sprite.svg#pickup"></use>
+                      </svg>
+                      <span class="select__text">Самовывоз</span>
+                    </label>
+                  </li>
+                  <li class="select__item">
+                    <input class="select__input-radio" type="radio" id="option-handover-delivery" name="handover"
+                      value="delivery">
+                    <label class="select__label" for="option-handover-delivery">
+                      <svg class="select__icon">
+                        <use href="@img/sprite.svg#delivery"></use>
+                      </svg>
+                      <span class="select__text">Доставка</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="select select--border--down-md">
+              <button class="select__pick select__pick--waiting" type="button">
+                <span class="select__text">Выберите способ оплаты</span>
+                <svg class="select__icon-pick">
+                  <use href="@img/sprite.svg#select-arrow"></use>
+                </svg>
+              </button>
+              <div class="select__list-wrapper">
+                <ul class="select__list">
+                  <li class="select__item">
+                    <input class="select__input-radio" type="radio" id="option-payment-online" name="payment"
+                      value="online">
+                    <label class="select__label" for="option-payment-online">
+                      <svg class="select__icon">
+                        <use href="@img/sprite.svg#card"></use>
+                      </svg>
+                      <span class="select__text">Онлайн оплата</span>
+                    </label>
+                  </li>
+                  <li class="select__item">
+                    <input class="select__input-radio" type="radio" id="option-payment-courier" name="payment"
+                      value="courier">
+                    <label class="select__label" for="option-payment-courier">
+                      <svg class="select__icon">
+                        <use href="@img/sprite.svg#wallet"></use>
+                      </svg>
+                      <span class="select__text">При получении</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </fieldset>
+          <!-- data-modal-check-validation -->
+          <button class="modal-order__submit button button--stretched" type="submit" data-modal-open="order-placed" data-modal-check-validation>
+            Оформить заказ
+          </button>
+          <p class="modal-order__notice">
+            Нажимая кнопку "Оформить заказ", вы соглашаетесь с политикой обработки персональных данных
+          </p>
+        </div>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="modal-order__description">
+        <p class="modal-order__text">
+          Активация услуг ОФД происходит в личном кабинете на сайте. Подробнее можно ознакомиться <a
+            class="link link--blue" href="#">здесь</a>
+        </p>
+        <p class="modal-order__list-title">Настройки для кассы:</p>
+        <ul class="modal-order__list" data-list-max="8">
+          <li class="modal-order__item modal-order__item--multiline">Сервер ОФД &mdash; kkt.ofd.yandex.net или 185.32.186.252</li>
+          <li class="modal-order__item">DNS &mdash; 0.0.0.0</li>
+          <li class="modal-order__item">Порт &mdash; 12345</li>
+          <li class="modal-order__item">Таймаут &mdash; 10000 мс</li>
+          <li class="modal-order__item">Таймер соединения с ОФД &mdash; 30 мс</li>
+          <li class="modal-order__item">Таймер опроса ФН &mdash; 30 мс</li>
+          <li class="modal-order__item">ИНН ОФД &mdash; 7704358518</li>
+          <li class="modal-order__item">Имя ОФД &mdash; ООО «Яндекс.ОФД»</li>
+          <li class="modal-order__item">Сервер ОФД &mdash; kkt.ofd.yandex.net или 185.32.186.252</li>
+          <li class="modal-order__item">DNS &mdash; 0.0.0.0</li>
+          <li class="modal-order__item">Порт &mdash; 12345</li>
+          <li class="modal-order__item">Таймаут &mdash; 10000 мс</li>
+          <li class="modal-order__item">Таймер соединения с ОФД &mdash; 30 мс</li>
+          <li class="modal-order__item">Таймер опроса ФН &mdash; 30 мс</li>
+          <li class="modal-order__item">ИНН ОФД &mdash; 7704358518</li>
+          <li class="modal-order__item">Имя ОФД &mdash; ООО «Яндекс.ОФД»</li>
+        </ul>
+        <button class="modal-order__more link link--sm" type="button" data-unlimited="0">Читать полностью</button>
+      </div>
+    </form>
+  </article>
+</div>

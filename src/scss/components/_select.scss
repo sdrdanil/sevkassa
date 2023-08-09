@@ -1,0 +1,175 @@
+$hover-color: darken(white, 12);
+$border: 1px solid var(--grey-2);
+$duration: .15s;
+
+.select {
+  position: relative;
+
+  &--active & {
+    &__pick {
+      position: relative;
+      border-radius: 5px 5px 0 0;
+      transition: 0s;
+    }
+
+    &__icon-pick {
+      transform: rotate(180deg);
+    }
+
+    &__list-wrapper {
+      z-index: 2;
+      grid-template-rows: 1fr;
+    }
+
+    &__input-radio {
+      display: initial;
+    }
+  }
+
+  &__pick {
+    @include input;
+    padding: 12px 15px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: 0s ease $duration, outline 0s, outline-offset 0s, column-gap .15s, padding .15s;
+
+    @include hover-on {
+      &:hover {
+        background: $hover-color;
+      }
+    }
+
+    &:focus-visible {
+      z-index: 3;
+      outline: var(--focus-outline);
+      outline-offset: 2px;
+    }
+
+    &--waiting {
+      padding-right: 17px;
+      justify-content: space-between;
+      column-gap: 0px;
+    }
+
+    &--selected {
+      padding: 12px 11px 10px;
+      column-gap: 46px;
+    }
+  }
+
+  &__icon-pick {
+    width: 16px;
+    min-width: 16px;
+    aspect-ratio: 2;
+    stroke: black;
+    stroke-width: 2px;
+    transform: rotate(0);
+    transition: $duration;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__text {
+    // flex-grow: 1;
+    letter-spacing: -0.7px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &__list-wrapper {
+    position: absolute;
+    z-index: 1;
+    // left: 0;
+    // top: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows $duration linear;
+
+    &:has(.select__input-radio:focus-visible) {
+      outline: var(--focus-outline);
+      outline-offset: 2px;
+    }
+  }
+
+  &__list {
+    min-height: 0;
+  }
+
+  &__input-radio {
+    @extend %visually-hidden;
+    display: none;
+  }
+
+  &__label {
+    @include input;
+    border-radius: 0;
+    border-top: $border;
+    display: flex;
+    align-items: center;
+    column-gap: 46px;
+
+    @include hover-on {
+      &:hover {
+        background: $hover-color;
+      }
+    }
+  }
+
+  &__input-radio:checked+&__label {
+    background: darken(white, 30);
+    cursor: default;
+  }
+
+  &__item:last-child &__label {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+@include breakpoint-down(clg) {
+  .select__pick {
+    // padding-right: 9px;
+    border-radius: 5px;
+
+    &--selected {
+      column-gap: 28px;
+    }
+  }
+
+  .select__text {
+    // letter-spacing: 0px;
+  }
+}
+
+@include breakpoint-down(md) {
+  .select {
+    &--border--down-md {
+      .select__pick {
+        border: $border;
+        z-index: 3;
+      }
+
+      .select__label {
+        border: $border;
+        border-top: none;
+      }
+    }
+
+    &__pick {
+      padding-right: 20px;
+    }
+  }
+}
+
+@include breakpoint-down(sm) {
+  .select {
+    &__label {
+      border-radius: 0px;
+    }
+  }
+}

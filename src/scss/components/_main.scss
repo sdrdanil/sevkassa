@@ -1,0 +1,51 @@
+.main {
+  padding-bottom: 20px;
+  background: white;
+
+  &__default {
+    margin-bottom: 120px;
+  }
+
+  &__short {
+    margin-top: -40px;
+    margin-bottom: 80px;
+  }
+
+  &__up {
+    margin-top: -54px;
+  }
+
+  @include breakpoint-down(clg) {
+    padding-bottom: 0;
+
+    &__default {
+      margin-bottom: 80px;
+    }
+
+    &__short {
+      margin-top: -13px;
+      margin-bottom: 60px;
+    }
+
+    &__articles {
+      margin-top: -30px;
+    }
+  }
+
+  @include breakpoint-down(csm) {
+    padding-bottom: 0;
+
+    &__default {
+      margin-bottom: 59px;
+    }
+
+    &__short {
+      margin-top: -13px;
+      margin-bottom: 50px;
+    }
+
+    &__articles {
+      margin-top: -30px;
+    }
+  }
+}

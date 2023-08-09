@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  function testWebP(callback) {
+    var webP = new Image();
+    webP.onload = webP.onerror = function () {
+      callback(webP.height == 2);
+    };
+    webP.src =
+      'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+  }
+
+  testWebP(function (support) {
+    if (support == true) {
+      document.querySelector('html').classList.add('webp');
+    } else {
+      document.querySelector('html').classList.add('no-webp');
+    }
+  });
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7SUc.woff2"
+    as="font" type="font/woff2" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" media="print"
+    onload="this.media='all'">
+  <link href="css/style.min.css?_v=20230809055210" rel="stylesheet">
+  <script src="js/app.min.js?_v=20230809055210" defer></script>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>Коды активации ОФД</title>
+</head>
+
+<body class data-lock-count="0">
+  <div class="wrapper">
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__title-block">
+            <span class="header__subtitle">
+              Интернет-магазин
+              кодов активации ОФД
+            </span>
+            <img class="header__logo" src="./img/logo.svg" alt="logo" width="160" height="35">
+          </div>
+          <nav class="header__nav-block">
+            <div class="header__info-part">
+              <div class="header__schedule">
+                <svg class="header__icon">
+                  <use href="./img/sprite.svg#clock"></use>
+                </svg>
+                <dl class="header__schedule-list">
+                  <dt class="header__weekday">Пн-Пт</dt>
+                  <dd class="header__time">
+                    <time datetime="09:00">09:00</time> - <time datetime="19:00">19:00</time>
+                  </dd>
+                  <dt class="header__weekday">Сб-Вс</dt>
+                  <dd class="header__time">
+                    <time datetime="10:00">10:00</time> - <time datetime="17:00">17:00</time>
+                  </dd>
+                </dl>
+              </div>
+              <div class="header__call">
+                <svg class="header__call-icon header__icon">
+                  <use href="./img/sprite.svg#phone"></use>
+                </svg>
+                <a class="header__tel-link" href="tel:+79781363606">+7 (978) 136-36-06</a>
+                <button class="header__callback">Заказать обратный звонок</button>
+              </div>
+            </div>
+            <div class="header__nav-panel">
+              <button class="header__button-close" hidden aria-label="Закрыть меню">
+                <svg class="header__icon-close">
+                  <use href="./img/sprite.svg#close"></use>
+                </svg>
+              </button>
+              <ul class="header__nav-list">
+                <li class="header__item">
+                  <a class="header__link" href="#greeting">О магазине</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#shop">Каталог товаров</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#">Доставка и оплата</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#service">Наши услуги</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#feedback">Отзывы</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#articles">Статьи</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#footer">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="header__wrapper-button">
+            <button class="header__button-menu" hidden aria-label="Открыть меню">
+              <svg class="header__icon-menu">
+                <use href="./img/sprite.svg#burger-menu"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero main__default main__up">
+        <div class="container">
+          <div class="hero__inner">
+            <h1 class="hero__title">коды активации офд</h1>
+            <p class="hero__description">
+              это уникальный набор символов, который позволяет оплачивать услуги оператора фискальных данных.
+            </p>
+            <a class="hero__button button" href="#shop">Смотреть</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="greeting main__default" id="greeting">
+        <div class="container">
+          <div class="greeting__inner">
+            <h2 class="greeting__title title">
+              Добро пожаловать в наш интернет-магазин
+            </h2>
+            <div class="greeting__text-wrapper">
+              <p class="greeting__text text">
+                Заручившись поддержкой надежных партнеров «Sev-Kassa» осуществляйте легкий переход на кассовый аппараты
+                в
+                своей сфере предоставления услуг, товаров или выполнения работ. Наличие онлайн кассы позволяют прозрачно
+                осуществлять предпринимательскую деятельность. Поскольку вся информация будет автоматически пересылаться
+                в
+                налоговые органы через ОФД.
+              </p>
+              <p class="greeting__text text">
+                Открытое ведение бизнеса также позволит избежать частых проверок налоговиков. Например, касса 54 фз
+                позволяет снизить бумагооборот, а также корректировать работу компании. Фискальный регистратор
+                самостоятельно будет выполняет отчеты, что позволит кассирам не вести несколько книг кассового учета.
+                Значительно проще происходит и подсчет товарных остатков.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits main__default">
+        <div class="container">
+          <div class="benefits__inner">
+            <h2 class="benefits__title title">
+              Почему наша компания стоит вашего внимания?
+            </h2>
+            <ul class="benefits__list">
+              <li class="benefits__item benefits__item--fast-delivery">
+                <h3 class="benefits__item-title">Быстрая доставка</h3>
+                <p class="benefits__item-text">Отправляем коды в течение 5 минут после оплаты</p>
+              </li>
+              <li class="benefits__item benefits__item--quality">
+                <h3 class="benefits__item-title">Качество</h3>
+                <p class="benefits__item-text">Гарантия от производителя</p>
+              </li>
+              <li class="benefits__item benefits__item--integrated-approach">
+                <h3 class="benefits__item-title">Комплексный подход</h3>
+                <p class="benefits__item-text">К обслуживанию кассы на предприятии</p>
+              </li>
+              <li class="benefits__item benefits__item--low-price">
+                <h3 class="benefits__item-title">Гарантия низких цен</h3>
+                <p class="benefits__item-text">На товары и услуги в нашем магазине</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop main__default" id="shop">
+        <div class="container">
+          <div class="shop__inner">
+            <h2 class="shop__title title">Популярные товары</h2>
+            <div class="shop__array">
+              <div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/yandex-1.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--yandex-1" src="./img/content/products/yandex-1.jpg" alt="yandex ofd" width="104" height="80">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Яндекс ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>490</output>
+      <input type="hidden" name="price" value="490" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/taxcom.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--taxcom" src="./img/content/products/taxcom.jpg" alt="taxcom ofd" width="107" height="75">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Такском ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>790</output>
+      <input type="hidden" name="price" value="790" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/ofdru.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--ofdru" src="./img/content/products/ofdru.jpg" alt="ofd.ru" width="107" height="76">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации OFD.ru</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>790</output>
+      <input type="hidden" name="price" value="790" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/fofd.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--fofd" src="./img/content/products/fofd.jpg" alt="first ofd" width="107" height="65">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Первый ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>790</output>
+      <input type="hidden" name="price" value="790" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/yandex-2.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--yandex-2" src="./img/content/products/yandex-2.jpg" alt="yandex ofd" width="107" height="83">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Яндекс ОФД</h3>
+    <span class="card__duration" data-product-duration>36 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>990</output>
+      <input type="hidden" name="price" value="990" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/pofd.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--pofd" src="./img/content/products/pofd.jpg" alt="platform ofd" width="107" height="68">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Платформа ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>790</output>
+      <input type="hidden" name="price" value="790" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/sofd.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--sofd" src="./img/content/products/sofd.jpg" alt="sbis ofd" width="104" height="80">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Сбис ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>990</output>
+      <input type="hidden" name="price" value="990" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/fofd.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--fofd" src="./img/content/products/fofd.jpg" alt="first ofd" width="104" height="80">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Первый ОФД</h3>
+    <span class="card__duration" data-product-duration>36 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>1590</output>
+      <input type="hidden" name="price" value="1590" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+              <div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/yandex-1.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--yandex-1" src="./img/content/products/yandex-1.jpg" alt="yandex ofd" width="104" height="80">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Яндекс ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>490</output>
+      <input type="hidden" name="price" value="490" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/taxcom.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--taxcom" src="./img/content/products/taxcom.jpg" alt="taxcom ofd" width="107" height="75">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Такском ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>790</output>
+      <input type="hidden" name="price" value="790" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/ofdru.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--ofdru" src="./img/content/products/ofdru.jpg" alt="ofd.ru" width="107" height="76">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации OFD.ru</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>790</output>
+      <input type="hidden" name="price" value="790" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/fofd.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--fofd" src="./img/content/products/fofd.jpg" alt="first ofd" width="107" height="65">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Первый ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>790</output>
+      <input type="hidden" name="price" value="790" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/yandex-2.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--yandex-2" src="./img/content/products/yandex-2.jpg" alt="yandex ofd" width="107" height="83">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Яндекс ОФД</h3>
+    <span class="card__duration" data-product-duration>36 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>990</output>
+      <input type="hidden" name="price" value="990" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/pofd.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--pofd" src="./img/content/products/pofd.jpg" alt="platform ofd" width="107" height="68">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Платформа ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>790</output>
+      <input type="hidden" name="price" value="790" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/sofd.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--sofd" src="./img/content/products/sofd.jpg" alt="sbis ofd" width="104" height="80">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Сбис ОФД</h3>
+    <span class="card__duration" data-product-duration>15 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>990</output>
+      <input type="hidden" name="price" value="990" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+
+<div class="card" data-product>
+  <div class="card__wrapper-image">
+    <picture class="card__picture" data-product-image>
+      <source srcset="./img/content/products/fofd.webp" type="image/webp">
+      <img class="card__image card__image--pixel-perfect--fofd" src="./img/content/products/fofd.jpg" alt="first ofd" width="104" height="80">
+    </picture>
+  </div>
+  <div class="card__wrapper-content">
+    <h3 class="card__title" data-product-title>Код активации Первый ОФД</h3>
+    <span class="card__duration" data-product-duration>36 месяцев</span>
+    <div class="card__price-wrapper">
+      <output class="card__price" data-product-total-price>1590</output>
+      <input type="hidden" name="price" value="1590" data-product-price-per-item>
+      <div class="card__input-number-wrapper">
+        <div class="input-number">
+          <button class="input-number__button input-number__button--minus" type="button" tabindex="-1">&ndash;</button>
+          <input class="input-number__field" type="number" name="number" min="1" step="1" value="1" data-product-quantity aria-label="Количество">
+          <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+    <button class="card__button-buy" data-modal-open="order" data-modal-callback="product">Купить</button>
+  </div>
+</div>
+            </div>
+            <a class="shop__link-show link link--md" href="#">Показать&nbsp;все</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="consultation main__short">
+  <div class="consultation__inner">
+    <h2 class="consultation__title title title--white">Есть вопросы?</h2>
+    <p class="consultation__text">
+      Наши специалисты свяжутся с вами и найдут оптимальные для вас условия сотрудничества
+    </p>
+    <form class="consultation__form" method="POST" onsubmit="return false;">
+      <input class="consultation__item input" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <input class="consultation__item input" type="tel" name="tel" placeholder="Телефон" data-tel-mask>
+      <button class="consultation__item button" type="button" data-modal-open="service" data-modal-callback="consultation">Заказать конcультацию</button>
+    </form>
+    <p class="consultation__notice">
+      Нажимая кнопку "Заказать консультацию" вы соглашаетесь с политикой обработки персональнх данных
+    </p>
+  </div>
+</section>
+
+      <section class="feedback main__default" id="feedback">
+        <div class="container">
+          <div class="feedback__inner">
+            <h2 class="feedback__title title">Отзывы наших&nbsp;покупателей</h2>
+            <div class="feedback__swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="feedback__item">
+    <div class="feedback__photo">
+      <picture class="feedback__picture">
+        <source srcset="./img/content/feedback/buyer-1.webp" type="image/webp">
+        <img class="feedback__image" src="./img/content/feedback/buyer-1.jpg" alt="photo">
+      </picture>
+    </div>
+    <div class="feedback__info">
+      <span class="feedback__name">Сергей</span>
+      <div class="feedback__rating star-rating star-rating--tight">
+        <span class="star-rating__item" data-rating-value="5"></span>
+        <span class="star-rating__item star-rating__item--active" data-rating-value="4"></span>
+        <span class="star-rating__item" data-rating-value="3"></span>
+        <span class="star-rating__item" data-rating-value="2"></span>
+        <span class="star-rating__item" data-rating-value="1"></span>
+      </div>
+      <time class="feedback__date" datetime="2021-02-10">10.02.2021</time>
+    </div>
+    <p class="feedback__text">
+      Все очень просто и быстро активировала, даже не ожидала такой лёгкости. спасибо большое продавцу!
+      Конечно я рекомендую эту услугу. Все благ вам. Совсем дёшево оплатила офд на 3 года, это просто
+      находка!!!!
+    </p>
+  </div>
+</div>
+              </div>
+            </div>
+            <div class="feedback__navigation">
+              <button class="feedback__button-navigation feedback__button-navigation--left" aria-label="Предыдущий отзыв">
+                <svg class="feedback__icon feedback__icon--left">
+                  <use href="./img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="feedback__button-navigation feedback__button-navigation--right" aria-label="Следующий отзыв">
+                <svg class="feedback__icon feedback__icon--right">
+                  <use href="./img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <button class="feedback__button-add link link--md" data-modal-open="feedback">Добавить отзыв</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="info main__default">
+        <div class="container">
+          <div class="info__inner">
+            <h2 class="info__title title">Sevkassa - интернет&#8209;магазин программного обеспечения для бизнеса</h2>
+            <div class="info__image-wrapper">
+              <picture class="info__picture">
+                <source srcset="./img/info.webp" type="image/webp">
+                <img class="info__image" src="./img/info.jpg" alt="image">
+              </picture>
+            </div>
+            <div class="info__text-wrapper">
+              <p class="info__text text">
+                Первая покупка фискального регистратора будет значительно ощутима, но, вместе с тем и необходимая. Ведь
+                согласно законодательным нормам закона 54&#8209;ФЗ на тех, кто осуществляет деятельность без
+                контрольно-кассовой
+                техники будут возложены санкции и штрафы.
+              </p>
+              <p class="info__text text">
+                Покупая ккт в нашей компании, вы значительно сэкономите денежные средства на приобретении качественного
+                и
+                нового кассового аппарата. Мы предлагаем квалифицированную помощь в подборе необходимого именно вам
+                оборудования. Рекомендуем доверять лишь надежным партнерам в решении вопроса купить кассу для ип.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service main__default" id="service">
+        <div class="container">
+          <div class="service__inner">
+            <h2 class="service__title title">Чем еще мы можем быть вам полезны?</h2>
+            <ul class="service__list">
+              <li class="service__item" data-service-item>
+  <img class="service__icon" src="./img/sprite.svg#register" alt="alt" width="120" height="140" data-service-icon>
+  <h3 class="service__item-title" data-service-title>Регистрируем в ФНС</h3>
+  <button class="service__button" data-modal-open="service" data-modal-callback="service">Заказать</button>
+</li>
+
+<li class="service__item" data-service-item>
+  <img class="service__icon" src="./img/sprite.svg#signature" alt="alt" width="140" height="140" data-service-icon>
+  <h3 class="service__item-title" data-service-title>Оформляем электронную подпись</h3>
+  <button class="service__button" data-modal-open="service" data-modal-callback="service">Заказать</button>
+</li>
+
+<li class="service__item" data-service-item>
+  <img class="service__icon" src="./img/sprite.svg#operator" alt="alt" width="140" height="140" data-service-icon>
+  <h3 class="service__item-title" data-service-title>Подключаем к ОФД</h3>
+  <button class="service__button" data-modal-open="service" data-modal-callback="service">Заказать</button>
+</li>
+
+<li class="service__item" data-service-item>
+  <img class="service__icon" src="./img/sprite.svg#tech-support" alt="alt" width="140" height="140" data-service-icon>
+  <h3 class="service__item-title" data-service-title>Предоставляем техническое сопровождение оборудования</h3>
+  <button class="service__button" data-modal-open="service" data-modal-callback="service">Заказать</button>
+</li>
+
+<li class="service__item" data-service-item>
+  <img class="service__icon" src="./img/sprite.svg#cash" alt="alt" width="120" height="140" data-service-icon>
+  <h3 class="service__item-title" data-service-title>Снимаем кассы с учета</h3>
+  <button class="service__button" data-modal-open="service" data-modal-callback="service">Заказать</button>
+</li>
+
+<li class="service__item" data-service-item>
+  <img class="service__icon" src="./img/sprite.svg#learning" alt="alt" width="140" height="140" data-service-icon>
+  <h3 class="service__item-title" data-service-title>Обучаем в работе с ККТ</h3>
+  <button class="service__button" data-modal-open="service" data-modal-callback="service">Заказать</button>
+</li>
+
+<li class="service__item" data-service-item>
+  <img class="service__icon" src="./img/sprite.svg#hard-drive" alt="alt" width="140" height="140" data-service-icon>
+  <h3 class="service__item-title" data-service-title>Производим замену фискального накопителя</h3>
+  <button class="service__button" data-modal-open="service" data-modal-callback="service">Заказать</button>
+</li>
+
+<li class="service__item" data-service-item>
+  <img class="service__icon service__icon--re-registration" src="./img/sprite.svg#re-registration" alt="alt" width="170" height="120" data-service-icon>
+  <h3 class="service__item-title" data-service-title>Пере&shy;регистрируем ККТ</h3>
+  <button class="service__button" data-modal-open="service" data-modal-callback="service">Заказать</button>
+</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="articles main__default main__articles" id="articles">
+        <div class="container">
+          <div class="articles__inner">
+            <h2 class="articles__title title">Полезная информация</h2>
+            <ul class="articles__list">
+              <li class="articles__item">
+                <a class="articles__item-link" href="/">
+                  <picture class="articles__picture">
+                    <source srcset="./img/content/articles/image-1.webp" type="image/webp">
+                    <img class="articles__image" src="./img/content/articles/image-1.jpg" alt="image">
+                  </picture>
+                  <div class="articles__content">
+                    <h3 class="articles__item-title">Кому нужна касса с&nbsp;1&nbsp;июля 2019года?!</h3>
+                    <time class="articles__date" datetime="2022-01-01">01.01.2022</time>
+                  </div>
+                </a>
+              </li>
+              <li class="articles__item">
+                <a class="articles__item-link" href="/">
+                  <picture class="articles__picture">
+                    <source srcset="./img/content/articles/image-2.webp" type="image/webp">
+                    <img class="articles__image" src="./img/content/articles/image-2.jpg" alt="image">
+                  </picture>
+                  <div class="articles__content">
+                    <h3 class="articles__item-title">Кому продлили отсрочку до 2021 года?!</h3>
+                    <time class="articles__date" datetime="2022-01-01">01.01.2022</time>
+                  </div>
+                </a>
+              </li>
+              <li class="articles__item">
+                <a class="articles__item-link" href="/">
+                  <picture class="articles__picture">
+                    <source srcset="./img/content/articles/image-3.webp" type="image/webp">
+                    <img class="articles__image" src="./img/content/articles/image-3.jpg" alt="image">
+                  </picture>
+                  <div class="articles__content">
+                    <h3 class="articles__item-title">Налоговые штрафы</h3>
+                    <time class="articles__date" datetime="2022-01-01">01.01.2022</time>
+                  </div>
+                </a>
+              </li>
+              <li class="articles__item">
+                <a class="articles__item-link" href="/">
+                  <picture class="articles__picture">
+                    <source srcset="./img/content/articles/image-4.webp" type="image/webp">
+                    <img class="articles__image" src="./img/content/articles/image-4.jpg" alt="image">
+                  </picture>
+                  <div class="articles__content">
+                    <h3 class="articles__item-title">Виды ККТ</h3>
+                    <time class="articles__date" datetime="2022-01-01">01.01.2022</time>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <a class="shop__link-show link link--md" href="#">Все&nbsp;статьи</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="consultation main__short">
+  <div class="consultation__inner">
+    <h2 class="consultation__title title title--white">Есть вопросы?</h2>
+    <p class="consultation__text">
+      Наши специалисты свяжутся с вами и найдут оптимальные для вас условия сотрудничества
+    </p>
+    <form class="consultation__form" method="POST" onsubmit="return false;">
+      <input class="consultation__item input" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <input class="consultation__item input" type="tel" name="tel" placeholder="Телефон" data-tel-mask>
+      <button class="consultation__item button" type="button" data-modal-open="service" data-modal-callback="consultation">Заказать конcультацию</button>
+    </form>
+    <p class="consultation__notice">
+      Нажимая кнопку "Заказать консультацию" вы соглашаетесь с политикой обработки персональнх данных
+    </p>
+  </div>
+</section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Каталог товаров</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">О магазине</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Доставка и оплата</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Наши услуги</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Отзывы</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Статьи</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__contact footer__contact--email">
+            <div class="footer__icon-wrapper footer__icon-wrapper--email">
+              <img class="footer__icon" src="./img/sprite.svg#email" alt="email" width="50" height="50">
+            </div>
+            <span class="footer__contact-title">Электронная почта</span>
+            <a class="footer__contact-link footer__contact-link--hover-on"
+              href="mailto:sevkassaru@yandex.ru">sevkassaru@yandex.ru</a>
+          </div>
+          <div class="footer__contact footer__contact--tel">
+            <div class="footer__icon-wrapper footer__icon-wrapper--tel">
+              <img class="footer__icon" src="./img/sprite.svg#phone" alt="telephone" width="50" height="50">
+            </div>
+            <span class="footer__contact-title">Телефон</span>
+            <a class="footer__contact-link footer__contact-link--hover-on"
+              href="tel:+79781363606">+7&nbsp;(978)&nbsp;136-36-06</a>
+          </div>
+          <div class="footer__contact footer__contact--address">
+            <div class="footer__icon-wrapper footer__icon-wrapper--address">
+              <img class="footer__icon" src="./img/sprite.svg#pin" alt="address" width="50" height="50">
+            </div>
+            <span class="footer__contact-title">Адрес</span>
+            <span class="footer__contact-link">г.&nbsp;Севастополь пл.&nbsp;Пирогова, дом&nbsp;7</span>
+          </div>
+          <div class="footer__wrapper-up">
+            <a class="footer__up" href="#header">
+              <span class="footer__up-text">В начало</span>
+              <svg class="footer__up-icon" aria-label="В начало">
+                <use href="./img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="footer__common">
+            <img class="footer__logo" src="./img/logo.svg" alt="logo" width="160" height="35">
+            <span class="footer__copy">© 2022 Sevkassa.ru - ключи активации ОФД по выгодным ценам!</span>
+            <a class="footer__privacy" href="#">Политика конфиденциальности</a>
+            <span class="footer__reg-number">ОГРН&nbsp;99999999999999999</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal" data-modal="order" style="z-index: 1000;" hidden data-modal-close-strict>
+  <article class="modal__content modal-order" data-product>
+    <button class="modal__close" aria-label="Закрыть" data-modal-close>
+      <svg class="modal__close-icon">
+        <use href="./img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <form class="modal-order__inner" method="POST" onsubmit="return false;">
+      <!-- HEAD -->
+      <div class="modal-order__head">
+        <picture class="modal-order__picture-head" data-product-image>
+          <source srcset="./img/plug.webp" type="image/webp">
+          <img class="modal-order__image" src="./img/plug.jpg" alt="[image]">
+        </picture>
+        <h2 class="modal-order__title" data-product-title>[title]</h2>
+        <p class="modal-order__tech-info">
+          <span class="modal-order__duration" data-product-duration>[duration]</span>
+          <span class="modal-order__article-number">Артикул: ХХХХХХХХ</span>
+        </p>
+        <div class="modal-order__input-price-wrapper" data-product-cost-per-item>
+          <output class="modal-order__price" data-product-total-price>[price]</output>
+          <input type="hidden" name="price" value="" data-product-price-per-item>
+          <div class="input-number">
+            <button class="input-number__button input-number__button--minus" type="button"
+              tabindex="-1">&ndash;</button>
+            <input class="input-number__field" type="number" name="number" min="1" step="1" value="1"
+              data-product-quantity>
+            <button class="input-number__button input-number__button--plus" type="button" tabindex="-1">+</button>
+          </div>
+        </div>
+        <p class="modal-order__benefits">
+          <span class="modal-order__benefits-item modal-order__benefits-item--price">
+            <svg class="modal-order__benefits-icon">
+              <use href="./img/sprite.svg#coins"></use>
+            </svg>
+            Выгодная цена!
+          </span>
+          <span class="modal-order__benefits-item">
+            <svg class="modal-order__benefits-icon">
+              <use href="./img/sprite.svg#fast-arrow"></use>
+            </svg>
+            Быстрая доставка
+          </span>
+        </p>
+      </div>
+
+      <!-- MAIN -->
+      <div class="modal-order__main">
+        <div class="modal-order__main-inner">
+          <picture class="modal-order__picture-main" data-product-image>
+            <source srcset="./img/plug.webp" type="image/webp">
+            <img class="modal-order__image" src="./img/plug.jpg" alt="[image]">
+          </picture>
+          <fieldset class="modal-order__fieldset">
+            <input class="modal-order__input input input--border--down-md" type="text" name="name" placeholder="ФИО"
+              autocomplete="name">
+            <input class="modal-order__input input input--border--down-md" type="tel" name="tel" placeholder="Телефон"
+              data-tel-mask>
+            <input class="modal-order__input input input--border--down-md" type="email" name="email"
+              placeholder="E-mail" autocomplete="email">
+
+            <div class="select select--border--down-md">
+              <button class="select__pick select__pick--waiting" type="button">
+                <span class="select__text">Выберите способ доставки</span>
+                <svg class="select__icon-pick">
+                  <use href="./img/sprite.svg#select-arrow"></use>
+                </svg>
+              </button>
+              <div class="select__list-wrapper">
+                <ul class="select__list select__list--border--down-md">
+                  <li class="select__item">
+                    <input class="select__input-radio" type="radio" id="option-handover-pickup" name="handover"
+                      value="pickup">
+                    <label class="select__label" for="option-handover-pickup">
+                      <svg class="select__icon">
+                        <use href="./img/sprite.svg#pickup"></use>
+                      </svg>
+                      <span class="select__text">Самовывоз</span>
+                    </label>
+                  </li>
+                  <li class="select__item">
+                    <input class="select__input-radio" type="radio" id="option-handover-delivery" name="handover"
+                      value="delivery">
+                    <label class="select__label" for="option-handover-delivery">
+                      <svg class="select__icon">
+                        <use href="./img/sprite.svg#delivery"></use>
+                      </svg>
+                      <span class="select__text">Доставка</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="select select--border--down-md">
+              <button class="select__pick select__pick--waiting" type="button">
+                <span class="select__text">Выберите способ оплаты</span>
+                <svg class="select__icon-pick">
+                  <use href="./img/sprite.svg#select-arrow"></use>
+                </svg>
+              </button>
+              <div class="select__list-wrapper">
+                <ul class="select__list">
+                  <li class="select__item">
+                    <input class="select__input-radio" type="radio" id="option-payment-online" name="payment"
+                      value="online">
+                    <label class="select__label" for="option-payment-online">
+                      <svg class="select__icon">
+                        <use href="./img/sprite.svg#card"></use>
+                      </svg>
+                      <span class="select__text">Онлайн оплата</span>
+                    </label>
+                  </li>
+                  <li class="select__item">
+                    <input class="select__input-radio" type="radio" id="option-payment-courier" name="payment"
+                      value="courier">
+                    <label class="select__label" for="option-payment-courier">
+                      <svg class="select__icon">
+                        <use href="./img/sprite.svg#wallet"></use>
+                      </svg>
+                      <span class="select__text">При получении</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </fieldset>
+          <!-- data-modal-check-validation -->
+          <button class="modal-order__submit button button--stretched" type="submit" data-modal-open="order-placed" data-modal-check-validation>
+            Оформить заказ
+          </button>
+          <p class="modal-order__notice">
+            Нажимая кнопку "Оформить заказ", вы соглашаетесь с политикой обработки персональных данных
+          </p>
+        </div>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="modal-order__description">
+        <p class="modal-order__text">
+          Активация услуг ОФД происходит в личном кабинете на сайте. Подробнее можно ознакомиться <a
+            class="link link--blue" href="#">здесь</a>
+        </p>
+        <p class="modal-order__list-title">Настройки для кассы:</p>
+        <ul class="modal-order__list" data-list-max="8">
+          <li class="modal-order__item modal-order__item--multiline">Сервер ОФД &mdash; kkt.ofd.yandex.net или 185.32.186.252</li>
+          <li class="modal-order__item">DNS &mdash; 0.0.0.0</li>
+          <li class="modal-order__item">Порт &mdash; 12345</li>
+          <li class="modal-order__item">Таймаут &mdash; 10000 мс</li>
+          <li class="modal-order__item">Таймер соединения с ОФД &mdash; 30 мс</li>
+          <li class="modal-order__item">Таймер опроса ФН &mdash; 30 мс</li>
+          <li class="modal-order__item">ИНН ОФД &mdash; 7704358518</li>
+          <li class="modal-order__item">Имя ОФД &mdash; ООО «Яндекс.ОФД»</li>
+          <li class="modal-order__item">Сервер ОФД &mdash; kkt.ofd.yandex.net или 185.32.186.252</li>
+          <li class="modal-order__item">DNS &mdash; 0.0.0.0</li>
+          <li class="modal-order__item">Порт &mdash; 12345</li>
+          <li class="modal-order__item">Таймаут &mdash; 10000 мс</li>
+          <li class="modal-order__item">Таймер соединения с ОФД &mdash; 30 мс</li>
+          <li class="modal-order__item">Таймер опроса ФН &mdash; 30 мс</li>
+          <li class="modal-order__item">ИНН ОФД &mdash; 7704358518</li>
+          <li class="modal-order__item">Имя ОФД &mdash; ООО «Яндекс.ОФД»</li>
+        </ul>
+        <button class="modal-order__more link link--sm" type="button" data-unlimited="0">Читать полностью</button>
+      </div>
+    </form>
+  </article>
+</div>
+  <div class="modal" data-modal="order-placed" style="z-index: 1001;" hidden>
+  <article class="modal__content modal-order-placed">
+    <h2 class="modal-order-placed__title">
+      <svg class="modal-order-placed__icon">
+        <use href="./img/sprite.svg#v"></use>
+      </svg>
+      Ваш заказ оформлен!
+    </h2>
+    <p class="modal-order-placed__order-number">Номер вашего заказа: 564</p>
+    <p class="modal-order-placed__notice">Сейчас Вы будете перенаправлены на страницу оплаты...</p>
+  </article>
+</div>
+  <div class="modal" data-modal="feedback" style="z-index: 1000;" hidden data-modal-close-strict>
+  <div class="modal__content modal-feedback">
+    <button class="modal__close" aria-label="Закрыть" data-modal-close>
+      <svg class="modal__close-icon">
+        <use href="./img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <h2 class="modal-feedback__title">Добавить отзыв</h2>
+    <form class="modal-feedback__form" method="POST" onsubmit="return false;">
+      <div class="modal-feedback__rating">
+        <span class="modal-feedback__rating-text">Ваша оценка</span>
+        <fieldset class="star-rating star-rating--hover-on">
+          <input class="star-rating__item" type="radio" name="rate" value="5">
+          <input class="star-rating__item" type="radio" name="rate" value="4">
+          <input class="star-rating__item" type="radio" name="rate" value="3">
+          <input class="star-rating__item" type="radio" name="rate" value="2">
+          <input class="star-rating__item" type="radio" name="rate" value="1">
+        </fieldset>
+      </div>
+      <input class="modal-feedback__input input input--border" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <input class="modal-feedback__input input input--border" type="email" name="email" placeholder="E-mail" autocomplete="email">
+      <textarea class="modal-feedback__textarea input input--border" name="text" rows="5" placeholder="Текст отзыва"></textarea>
+      <button class="modal-feedback__submit button button--stretched" type="submit">Добавить отзыв</button>
+    </form>
+  </div>
+</div>
+  <div class="modal" data-modal="service" style="z-index: 1001;" hidden data-modal-close-strict>
+  <article class="modal__content modal-service">
+    <button class="modal__close" aria-label="Закрыть" data-modal-close>
+      <svg class="modal__close-icon">
+        <use href="./img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <img class="modal-service__icon" src="./img/plug.jpg" alt="plug" data-service-icon>
+    <h2 class="modal-service__title" data-service-title>[title]</h2>
+    <p class="modal-service__text">
+      Заполните форму и наш менеджер свяжется с вами в течении 10 минут
+    </p>
+    <form class="modal-service__form" method="POST" onsubmit="return false;">
+      <input class="modal-service__input input input--border" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <input class="modal-service__input input input--border" type="text" name="tel" placeholder="Телефон" data-tel-mask>
+      <button class="modal-service__submit button button--stretched" type="submit">Заказать услугу</button>
+    </form>
+    <p class="modal-service__notice">
+      Нажимая кнопку "Заказать услугу", вы соглашаетесь с политикой обработки персональных данных
+    </p>
+  </article>
+</div>
+</body>
+
+</html>

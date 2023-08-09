@@ -1,0 +1,26 @@
+<div class="modal" data-modal="feedback" style="z-index: 1000;" hidden data-modal-close-strict>
+  <div class="modal__content modal-feedback">
+    <button class="modal__close" aria-label="Закрыть" data-modal-close>
+      <svg class="modal__close-icon">
+        <use href="@img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <h2 class="modal-feedback__title">Добавить отзыв</h2>
+    <form class="modal-feedback__form" method="POST" onsubmit="return false;">
+      <div class="modal-feedback__rating">
+        <span class="modal-feedback__rating-text">Ваша оценка</span>
+        <fieldset class="star-rating star-rating--hover-on">
+          <input class="star-rating__item" type="radio" name="rate" value="5">
+          <input class="star-rating__item" type="radio" name="rate" value="4">
+          <input class="star-rating__item" type="radio" name="rate" value="3">
+          <input class="star-rating__item" type="radio" name="rate" value="2">
+          <input class="star-rating__item" type="radio" name="rate" value="1">
+        </fieldset>
+      </div>
+      <input class="modal-feedback__input input input--border" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <input class="modal-feedback__input input input--border" type="email" name="email" placeholder="E-mail" autocomplete="email">
+      <textarea class="modal-feedback__textarea input input--border" name="text" rows="5" placeholder="Текст отзыва"></textarea>
+      <button class="modal-feedback__submit button button--stretched" type="submit">Добавить отзыв</button>
+    </form>
+  </div>
+</div>

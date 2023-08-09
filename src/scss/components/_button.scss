@@ -1,0 +1,61 @@
+.button {
+  display: inline-block;
+  min-width: 300px;
+  min-height: 50px;
+  padding: 10px 0 10px;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 10px;
+  background-image: linear-gradient(135deg, var(--aqua-1), var(--aqua-2), var(--aqua-1));
+  background-size:  300% 100%;
+  background-position-x: 0%;
+  background-position-y: center;
+  transition: background-position-x .6s cubic-bezier(0.55, 0.06, 0.68, 0.19), box-shadow .2s linear;
+
+  &:hover {
+    background-position-x: 100%;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 5px rgba(black, .8);
+  }
+
+  &:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+  }
+
+  &--stretched {
+    min-width: 100%;
+  }
+}
+
+@include breakpoint-down(clg) {
+  .button {
+    min-width: 300px;
+    padding: 13px 0;
+    font-size: 20px;
+
+    &--stretched {
+      min-width: 100%;
+    }
+  }
+}
+
+@include breakpoint-down(sm) {
+  .button {
+    min-width: 160px;
+    min-height: 40px;
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+
+    &--stretched {
+      min-width: 100%;
+    }
+  }
+}

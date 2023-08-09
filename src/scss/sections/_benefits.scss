@@ -1,0 +1,110 @@
+.benefits {
+  background-color: #F8F8F8;
+
+  @include breakpoint-down(clg) {
+    padding-bottom: 12px;
+  }
+
+  &__inner {
+    padding: 40px 0;
+
+    @include breakpoint-down(csm) {
+      padding-bottom: 21px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 70px;
+
+    @include breakpoint-down(clg) {
+      margin: 0 auto 50px;
+      max-width: 500px;
+    }
+
+    @include breakpoint-down(csm) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 400px));
+    grid-auto-rows: 1fr;
+    gap: 30px;
+    justify-content: space-evenly;
+
+    @include breakpoint-down(clg) {
+      padding: 0 10px;
+      grid-template-columns: repeat(2, minmax(0, 400px));
+    }
+
+    @include breakpoint-down(csm) {
+      padding: 0 17px;
+      grid-template-columns: minmax(0, 350px);
+      gap: 16px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    padding: 151px 21px 13px 15px;
+    border-radius: 10px;
+    color: var(--blue);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 264px auto;
+    background-position: right -55px top -57px;
+
+    @include breakpoint-down(clg) {
+      padding-top: 150px;
+    }
+
+    @include breakpoint-down(csm) {
+      padding: 111px 17px 18px 12px;
+      background-size: 227px auto;
+    }
+
+    &--fast-delivery {
+      background-image: url('@img/benefits_fast-delivery.png');
+    }
+
+    &--quality {
+      background-image: url('@img/benefits_quality.png');
+    }
+
+    &--integrated-approach {
+      background-image: url('@img/benefits_integrated-approach.png');
+    }
+
+    &--low-price {
+      background-image: url('@img/benefits_low-price.png');
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 9px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+
+    @include breakpoint-down(csm) {
+      font-size: 16px;
+    }
+  }
+
+  &__item-text {
+    width: 225px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @include breakpoint-down(csm) {
+      width: 190px;
+      font-size: 13px;
+    }
+  }
+}

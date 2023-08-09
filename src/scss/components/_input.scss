@@ -1,0 +1,26 @@
+.input {
+  @include input;
+
+  &::placeholder {
+    color: var(--grey-2);
+  }
+
+  &:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+  }
+
+  &--border {
+    border-radius: 10px;
+    border: 1px solid var(--grey-2);
+  }
+}
+
+@include breakpoint-down(md) {
+  .input {
+    &--border--down-md {
+      border-radius: 5px;
+      border: 1px solid var(--grey-2);
+    }
+  }
+}

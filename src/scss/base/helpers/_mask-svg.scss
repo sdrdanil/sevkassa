@@ -1,0 +1,17 @@
+%mask-svg {
+  --mask-svg-url: none;
+  --mask-svg-repeat: no-repeat;
+  --mask-svg-size: contain;
+  --mask-svg-position-x: center;
+  --mask-svg-position-y: center;
+  --mask-svg-position: var(--mask-svg-position-x) var(--mask-svg-position-y);
+
+  -webkit-mask-image: var(--mask-svg-url);
+  mask-image: var(--mask-svg-url);
+  -webkit-mask-repeat: var(--mask-svg-repeat);
+  mask-repeat: var(--mask-svg-repeat);
+  -webkit-mask-size: var(--mask-svg-size);
+  mask-size: var(--mask-svg-size);
+  -webkit-mask-position: var(--mask-svg-position);
+  mask-position: var(--mask-svg-position);
+}

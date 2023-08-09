@@ -1,0 +1,22 @@
+.title {
+  color: black;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--white {
+    color: white;
+  }
+
+  @include breakpoint-down(clg) {
+    font-size: 25px;
+  }
+
+  @include breakpoint-down(csm) {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

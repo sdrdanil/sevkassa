@@ -1,0 +1,41 @@
+.link {
+  display: inline;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;text-underline-offset: 4px;
+  color: black;
+  transition: color .3s ease;
+  cursor: pointer;
+  
+  &--md {
+    font-size: 22px;
+
+    @include breakpoint-down(csm) {
+      font-size: 18px;
+    }
+  }
+
+  &--sm {
+    font-size: 18px;
+
+    @include breakpoint-down(csm) {
+      font-size: 16px;
+    }
+  }
+
+  &--blue {
+    color: #0061BB;
+  }
+
+  &:hover {
+    color: var(--orange);
+  }
+
+  &:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 5px;
+    border-radius: 3px;
+  }
+}

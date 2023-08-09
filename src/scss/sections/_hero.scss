@@ -1,0 +1,117 @@
+.hero {
+  color: white;
+  background-color: var(--blue);
+  background-image: url('@img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__inner {
+    min-height: 639px;
+    padding-top: 211px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    width: 471px;
+    margin-bottom: 43px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__button {
+    font-size: 22px;
+    padding-top: 13px;
+  }
+}
+
+@include breakpoint-down(clg) {
+  .hero {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(black, .5);
+    }
+
+    &__inner {
+      position: relative;
+      z-index: 1;
+      min-height: 667px;
+      padding-top: 229px;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 31px;
+      font-size: 50px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    &__description {
+      margin-bottom: 31px;
+      font-size: 22px;
+      line-height: normal;
+      text-align: center;
+    }
+  }
+}
+
+@include breakpoint-down(800) {
+  .hero {
+    background-image: url('@img/hero-768.jpg');
+  }
+}
+
+@include breakpoint-down(csm) {
+  .hero {
+    background-image: url('@img/hero-320.jpg');
+
+    &__inner {
+      min-height: 420px;
+      padding-top: 121px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    &__description {
+      width: 100%;
+      margin-bottom: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    &__button {
+      min-width: 160px;
+      min-height: 40px;
+      font-size: 15px;
+      padding-top: 10px;
+    }
+  }
+}
+
+// @include breakpoint-down(700) {
+//   .hero {
+//     background-image: url('@img/hero-320.jpg');
+//   }
+// }

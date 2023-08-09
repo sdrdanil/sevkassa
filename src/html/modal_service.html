@@ -1,0 +1,22 @@
+<div class="modal" data-modal="service" style="z-index: 1001;" hidden data-modal-close-strict>
+  <article class="modal__content modal-service">
+    <button class="modal__close" aria-label="Закрыть" data-modal-close>
+      <svg class="modal__close-icon">
+        <use href="@img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <img class="modal-service__icon" src="@img/plug.jpg" alt="plug" data-service-icon>
+    <h2 class="modal-service__title" data-service-title>[title]</h2>
+    <p class="modal-service__text">
+      Заполните форму и наш менеджер свяжется с вами в течении 10 минут
+    </p>
+    <form class="modal-service__form" method="POST" onsubmit="return false;">
+      <input class="modal-service__input input input--border" type="text" name="name" placeholder="Имя" autocomplete="name">
+      <input class="modal-service__input input input--border" type="text" name="tel" placeholder="Телефон" data-tel-mask>
+      <button class="modal-service__submit button button--stretched" type="submit">Заказать услугу</button>
+    </form>
+    <p class="modal-service__notice">
+      Нажимая кнопку "Заказать услугу", вы соглашаетесь с политикой обработки персональных данных
+    </p>
+  </article>
+</div>

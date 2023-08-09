@@ -1,0 +1,364 @@
+.modal-order {
+  @include modal__content;
+  max-width: 1110px;
+  padding-right: 70px;
+  border-radius: 20px;
+  background: white;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(280px, 373px) minmax(363px, 620px);
+    grid-template-areas:
+      "main head"
+      "main description";
+    column-gap: 40px;
+    row-gap: 43px;
+  }
+
+  &__head {
+    grid-area: head;
+    padding-top: 50px;
+    padding-top: calc(3.6vw - 7.5px);
+  }
+
+  &__picture-head {
+    display: none;
+  }
+
+  &__title {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  &__tech-info {
+    margin-bottom: 25px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--grey-2);
+  }
+
+  &__duration {
+    margin-right: 71px;
+    white-space: nowrap;
+  }
+
+  &__article-number {
+    flex-grow: 1;
+    white-space: nowrap;
+  }
+
+  &__input-price-wrapper {
+    margin-bottom: 36px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  &__price {
+    display: inline-block;
+    min-width: 140px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #17A400;
+
+    &::after {
+      content: var(--currency);
+    }
+  }
+
+  &__benefits {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--grey-2);
+  }
+
+  &__benefits-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    &--price {
+      margin-right: 38px;
+    }
+  }
+
+  &__benefits-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__main {
+    grid-area: main;
+    padding: 26px 17px 26px calc(16% - 31.7px);
+    border-radius: 20px;
+    background-color: var(--grey);
+  }
+
+  &__main-inner {
+    min-width: 250px;
+    max-width: 300px;
+  }
+
+  &__picture-main {
+    aspect-ratio: 1.2;
+    margin-bottom: 44px;
+    padding: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__fieldset {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__input {
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  &__submit {
+    margin-bottom: 20px;
+    min-width: 100%;
+    border-radius: 5px;
+  }
+
+  &__notice {
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--grey-2);
+  }
+
+  &__description {
+    grid-area: description;
+    padding-bottom: 50px;
+  }
+
+  &__text {
+    max-width: 550px;
+    margin-bottom: 44px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    color: black;
+  }
+
+  &__list-title {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 166%;
+    color: black;
+  }
+
+  &__list {
+    width: 324px;
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 172%;
+    color: black;
+    display: grid;
+    overflow: hidden;
+    transition: height .5s ease;
+  }
+
+  &__more {
+    display: block;
+    transform: scaleY(1);
+    transition: transform .5s ease, color .3s ease;
+    ;
+  }
+}
+
+@include breakpoint-down(lg) {
+  .modal-order {
+    border-radius: 15px;
+
+    &__inner {
+      column-gap: 19px;
+      row-gap: 15px;
+    }
+
+    &__head {
+      padding-top: 18px;
+    }
+
+    &__title {
+      font-size: 25px;
+      letter-spacing: -2.1px;
+    }
+
+    &__tech-info {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    &__duration {
+      margin-right: 30px;
+    }
+
+    &__input-price-wrapper {
+      margin-bottom: 28px;
+    }
+
+    &__benefits {
+      line-height: 193%;
+    }
+
+    &__main {
+      padding-top: 20px;
+      padding-bottom: 0;
+      border-radius: 15px;
+    }
+
+    &__picture-main {
+      margin-bottom: 35px;
+    }
+
+    &__input {
+      border-radius: 5px;
+    }
+
+    &__submit {
+      border-radius: 5px;
+    }
+
+    &__notice {
+      font-size: 13px;
+    }
+
+    &__text {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+
+    &__description {
+      padding-bottom: 37px;
+    }
+  }
+}
+
+@include breakpoint-down(md) {
+  .modal-order {
+    max-width: 400px;
+    padding: 17px 20px 35px;
+
+    &__inner {
+      max-width: 320px;
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "head"
+        "main"
+        "description";
+      row-gap: 14px;
+    }
+
+    &__head {
+      padding-top: 0;
+    }
+
+    &__picture-head {
+      display: block;
+      width: 161px;
+      margin-bottom: 6px;
+    }
+
+    &__title {
+      max-width: 185px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      letter-spacing: -0.1px;
+      font-weight: 600;
+    }
+
+    &__tech-info {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 137%;
+    }
+
+    &__input-price-wrapper {
+      margin-bottom: 24px;
+    }
+
+    &__price {
+      min-width: 112px;
+    }
+
+    &__benefits {
+      line-height: 170%;
+    }
+
+    &__benefits-item {
+      gap: 10px;
+    }
+
+    &__main {
+      padding: 0;
+      background: none;
+    }
+
+    &__picture-main {
+      display: none;
+    }
+
+    &__submit {
+      height: 50px;
+      font-size: 18px;
+    }
+
+    &__description {
+      max-width: 280px;
+      padding-top: 12px;
+      padding-bottom: 0;
+    }
+
+    &__text {
+      margin-bottom: 31px;
+    }
+
+    &__list {
+      margin-bottom: 24px;
+      max-width: 284px;
+      font-size: 15px;
+    }
+  }
+}
+
+@include breakpoint-down(sm) {
+  .modal-order {
+    max-width: initial;
+    border-radius: 0;
+  }
+}
